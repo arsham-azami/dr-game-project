@@ -1,0 +1,52 @@
+body{
+  background-color: aqua;
+   font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.grid-container{
+  display: grid;
+  grid-template-rows: 0.5fr 8fr 4fr;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  height: 100%;
+}
+.header{
+  background-color: black;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+.header a{
+  text-decoration: none;
+}
+.header .btn-group{
+  position: absolute;
+  right: 10px;
+}
+.header .btn-group button{
+  margin: 10px;
+}
+.body{
+  padding: 20px;
+}
+ul li{
+  display: inline;
+  margin: 10px;
+}
+a:hover{
+  color: aliceblue;
+}
+.body{
+  background-color: gray;
+}
+.footer{
+  background-color: greenyellow;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.footer h3{
+  margin: 10px;
+}
