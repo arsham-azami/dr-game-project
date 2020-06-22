@@ -24,12 +24,11 @@ export default function App() {
       </div>
 
       <div className ={'body'}>
-        Game club
-         assassins creed origins
-         assassins creed oddessey
-         assassins creed valhalla
-         assassins creed unity
-      </div>
+        Game club 
+         <h3> assassins creed unity</h3>
+         <h3> assassins creed origins</h3>
+         <h3> assassins creed oddessey</h3>
+       </div>
       
        <div className={'footer'}>
           <h3>tweeter</h3> 
