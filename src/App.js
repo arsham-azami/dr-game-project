@@ -25,6 +25,9 @@ export default function App() {
 
       <div className ={'body'}>
         Game club
+         assassins creed origins
+         assassins creed oddessey
+         assassins creed valhalla
       </div>
       
        <div className={'footer'}>
