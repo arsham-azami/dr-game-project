@@ -28,6 +28,7 @@ export default function App() {
          <h3> assassins creed unity</h3>
          <h3> assassins creed origins</h3>
          <h3> assassins creed oddessey</h3>
+         <h3> assassins creed 3</h3>
        </div>
       
        <div className={'footer'}>
