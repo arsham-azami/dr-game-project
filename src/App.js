@@ -1,22 +1,24 @@
 import React from 'react';
-// import ReactDOM from 'react-dom'
-import Product from './component/product'
+// import {Image, view} from 'react'
+import Product from './component/Product'
+
 
 export default function App() {
 
   return (
-
+   <>
     <div className={'grid-container'}>
 
       <div className={'header'}>
-       <h2><a href='/'>Dr.gamnpm e</a></h2>
+    
+       <h2><a href='/'>Dr.game</a></h2>
         <ul>
           <li><a href='#'>Home</a></li> 
           <li><a href='#'>Steam</a></li> 
           <li><a href='#'>Products</a></li> 
           <li><a href='#'>About us</a></li> 
         </ul>
-
+        <i class="fa fa-shopping-cart">chart</i>
         <div className={'btn-group'}>
           <button className={'btn btn-success'}>Sign in</button>
           <button className={'btn btn-success'}>Sign up</button>
@@ -24,18 +26,13 @@ export default function App() {
       </div>
 
       <div className ={'body'}>
-         <h3>Game club for dr.game</h3>
-         <h3> assassins creed unity</h3>
-         <h3> assassins creed origins</h3>
-         <h3> assassins creed oddessey</h3>
-         <h3> assassins creed 3</h3>
         <div className={'product-container'}>
-            <Product name={'ac origins'} price={'$120'} rate={'4.5'}></Product>
-            <Product name={'ac oddessey'} price={'$170'} rate={'4.5'}></Product>
-            <Product name={'red dead'} price={'$100'} rate={'4'}></Product>
+            <Product name={'ac origins'} price={'$120'} rate={'4.5'} alt={'acor'} src={require('public/images/logo')}></Product>
+            <Product name={'ac oddessey'} price={'$170'} rate={'4.5'} alt={'acod'} src={'public/images/logo 2.jpeg'}></Product>
+            <Product name={'red dead'} price={'$100'} rate={4} alt={'rdr'}></Product>
        </div>
      </div>
-      
+
        <div className={'footer'}>
           <h3>Tweeter</h3> 
           <h3>Instagram</h3> 
@@ -46,6 +43,7 @@ export default function App() {
        </div>
      
     </div>
+    </>
    )
 }
 

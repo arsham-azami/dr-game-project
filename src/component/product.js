@@ -5,10 +5,11 @@ export default function Product(props){
         <div className={'product'}>
            <img src={props.src} alt={props.alt}></img>
             <div className={'info'}>
-               <h3>{props.name}</h3>    
-               <h3>{props.price}</h3>    
-               <h3>{props.rate}</h3>    
+                <h3>Name:{props.name}</h3>    
+                <h3>Price:{props.price}</h3>    
+                <h3>Rating:{props.rate}</h3>  
             </div> 
+            <button className={'add-to-chart'}>Add to chart</button>  
         </div>
     )
 }
