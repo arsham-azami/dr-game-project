@@ -1,12 +1,11 @@
 body{
   background-color: aqua;
-   font-family: Verdana, Geneva, Tahoma, sans-serif
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
 }
 
 .grid-container{
-  grid-template-rows: 0.5fr 8fr 4fr;
+  grid-template-rows: 0.5fr 15fr 7fr;
   grid-template-columns: 1fr;
-  grid-gap: 10px;
   height: 100%;
 }
 .header{
@@ -20,10 +19,7 @@ body{
 .header a{
   text-decoration: none;
 }
-i{
-  color: aqua;
-  font-size: 12px;
-}
+
 ul li{
   display: inline;
   margin: 10px;
@@ -35,17 +31,43 @@ ul li{
 .header .btn-group button{
   margin: 10px;
 }
-.body{
-  padding: 60px;
-}
+
 
 a:hover{
   color: aliceblue;
 }
 .body{
   background-color: gray;
+  padding: 40px;
 }
-
+.game-news{
+  display: grid;
+  grid-template-columns: 400px 820px;
+  grid-template-rows: 300px 500px 600px;
+  grid-gap: 12px;
+}
+.news-one{
+  background-color: aqua;
+  grid-column: 1/3;
+}
+.news-two{
+  background-color: red;
+}
+.news-three{
+  background-color: royalblue;
+}
+.news-four{
+  background-color: green;
+  grid-column: 1/3;
+}
+.news-one, .news-two, .news-three, .news-four{
+  border-radius: 10px;
+}
+.title-one , .title-two {
+  font-size: 30px;
+  margin-top:40px ;
+  margin-bottom: 12px;
+}
 
 
 /* footer*/
@@ -65,19 +87,28 @@ a:hover{
 /*product component*/
 
 .product{
-  background-color:#ffff;
-  width: 300px;
-  height: 400px;
+  background-color:aqua;
+  width:360px ;
+  height: 500px;
   border-radius: 12px;
-  padding:20px ;
+ 
   border: 2px solid gray;
   position: relative;
+  margin-right: 20px;
 }
-.product-container{
-   display: flex;
-   flex-direction:row;
-   flex-wrap: wrap;
-   justify-content:space-between;
+.product-container-one , .product-container-two {
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  /* margin-bottom: 30px;
+  margin-top: 60px; */
+
+}
+h2{
+  margin-top: 60px;
 
 }
 .product .info{
@@ -86,11 +117,16 @@ a:hover{
   left: 10px;
 }
 .product .info h3{
-  font-size: medium;
+  font-size: 20px;
+}
+.product .pro-title{
+  font-size: 30px;
+  margin-top: 16px;
 }
 .product .add-to-chart{
-  background: none;
-  border: 2px solid aqua;
+  background: white;
+  
+  border: 2px solid wheat;
   border-radius: 12px;
   font-size: 12px;
   position: absolute;
@@ -99,6 +135,70 @@ a:hover{
   right: 10px;
 }
  .add-to-chart:hover{
-  background-color:aqua;
-  color:white;
+  background-color:wheat;
+  color:aqua;
 }
+.product .add-element{
+  background-color:white;
+  position: absolute;
+  width: 100%;
+  height: 58%;
+  border-radius:10px ;
+  transition-property: height;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+}
+.add-element:hover{
+  height: 70%;
+}
+.add-element .pro-image{
+  border-bottom: 1px solid black;
+  border-radius: 10px 10px 0 0;
+  background-color:aqua;
+  height:300px
+}
+.like-button{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* padding: 10px; */
+  /* visibility: hidden; */
+  position: absolute;
+  left:10px;
+  bottom:13px ;
+}
+.like-button button{
+  background: none;
+  color:aqua;
+  border: 1px solid aqua;
+  border-radius: 10px;
+  margin-right: 10px;
+  
+}
+.like-button button:hover{
+  background-color:aqua;
+  color:white ;
+}
+.num-button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-evenly;
+  position: absolute;
+  right: 20px;
+  bottom: 50px;
+  font-size: medium;
+}
+.num-button button{
+  border: 2px solid white;
+  background:none;
+  border-radius: 5px;
+  padding-right: 5px;
+  
+}
+.num-button:hover{
+  
+}
+
+
+
