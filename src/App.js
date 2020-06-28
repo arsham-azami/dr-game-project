@@ -1,39 +1,46 @@
 import React from 'react';
 // import {Image, view} from 'react'
 import Product from './component/Product'
-
+import Logone from './images/drlogo.png'
+import Logtwo from './images/dr.logo.jpeg'
 
 export default function App() {
 
-  if(document.innerHeight > 70){
-    const ele = document.createElement('p')
-    ele.innerText='top'
+  const darkMode =()=>{
+    
+    document.getElementById('head').style.backgroundColor='black'
+    document.getElementById('body').style.backgroundColor='black'
+    document.getElementById('but').innerText='Light mode'
+    document.getElementById('img-logo').setAttribute('src', Logone )
+    // document.getElementById('head').style.backgroundColor='white'
   }
 
   return (
-   <>
-    <div className={'grid-container'} id='main'>
 
-      <div className={'header'}>
+   <>
+    <div id='dark' className={'grid-container'} id='main'>
+
+      <div id='head' className={'header'}>
     
-       <h1><a href='/'>Dr.game</a></h1>
+       <img id='img-logo' className={'app-logo'} src={Logtwo}></img>
         <ul>
           <li><a href='#'>Home</a></li> 
           <li><a href='#'>Steam</a></li> 
+          <li><a href='#'>Teams</a></li> 
           <li><a href='#'>Products</a></li> 
           <li><a href='#'>About us</a></li> 
         </ul>
         
+        <button id='but' onClick={darkMode} className={'dark-button'}>Dark mode</button>
         <div className={'btn-group'}>
-          <button className={'btn btn-success'}>Sign in</button>
+          <button className={'btn btn-primary'}>Sign in</button>
           <button className={'btn btn-success'}>Sign up</button>
         </div>
 
       </div>
 
-      <div className ={'body'}>
+      <div id='body' className ={'body'}>
 
-      <p>News</p>
         <div className={'game-news'}>
             <div className={'news-one'}></div>
             <div className={'news-two'}></div>
@@ -43,8 +50,8 @@ export default function App() {
           
         <p className={'title-one'}>Best seller</p> 
         <div className={'product-container-one'}>
-            <Product name={'ac origins'} price={'$120'} rate={4.5} alt={'acor'} ></Product>
-            <Product name={'ac oddessey'} price={'$170'} rate={4.5} alt={'acod'}></Product>
+            <Product name={'ac origins'} price={'$120'} rate={4.5} alt={'acor'} src={Logone}></Product>
+            <Product name={'ac oddessey'} price={'$170'} rate={4.5} alt={'acod'} src={Logtwo}></Product>
             <Product name={'red dead'} price={'$100'} rate={4} alt={'rdr'}></Product>
          </div>
          
@@ -57,17 +64,17 @@ export default function App() {
         
      </div>
 
-       <div className={'footer'}>
+       <div id='footer' className={'footer'}>
           <h3>Tweeter</h3> 
           <h3>Instagram</h3> 
           <h3>Facebook</h3> 
           <h3>Telegram</h3> 
           <h3>Github</h3> 
           <h3>Pinterest</h3> 
-
        </div>
                         
     </div>
+
     </>
    )
 }

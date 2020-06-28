@@ -1,5 +1,5 @@
 body{
-  background-color: aqua;
+  background-color: white;
  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
 }
 
@@ -7,9 +7,10 @@ body{
   grid-template-rows: 0.5fr 15fr 7fr;
   grid-template-columns: 1fr;
   height: 100%;
+  width: 100%;
 }
 .header{
-  background-color: gray;
+  background-color: white;
   padding: 20px;
   display: flex;
   flex-direction: row;
@@ -18,6 +19,7 @@ body{
 }
 .header a{
   text-decoration: none;
+  color: #0000ff;
 }
 
 ul li{
@@ -31,15 +33,32 @@ ul li{
 .header .btn-group button{
   margin: 10px;
 }
+.header .dark-button{
+  border: 2px solid aqua;
+  position: absolute;
+  background: #fff;
+  right: 200px;
+  border-radius: 8px;
+  padding: 5px;
+  font-size: 15px;
+}
 
-
-a:hover{
-  color: aliceblue;
+.header a:hover{
+  border-bottom: 2px solid blue;
 }
 .body{
-  background-color: gray;
+  background-color: #fff;
   padding: 40px;
 }
+.app-logo{
+  width: 60px;
+  height: 60px;
+}
+
+
+/* body */
+
+
 .game-news{
   display: grid;
   grid-template-columns: 400px 820px;
@@ -47,17 +66,17 @@ a:hover{
   grid-gap: 12px;
 }
 .news-one{
-  background-color: aqua;
+ border: 3px solid aqua;
   grid-column: 1/3;
 }
 .news-two{
-  background-color: red;
+  border: 3px solid red;
 }
 .news-three{
-  background-color: royalblue;
+  border: 3px solid royalblue;
 }
 .news-four{
-  background-color: green;
+  border: 3px solid green;
   grid-column: 1/3;
 }
 .news-one, .news-two, .news-three, .news-four{
@@ -120,7 +139,7 @@ h2{
   font-size: 20px;
 }
 .product .pro-title{
-  font-size: 30px;
+  font-size: 25px;
   margin-top: 16px;
 }
 .product .add-to-chart{
@@ -155,7 +174,9 @@ h2{
   border-bottom: 1px solid black;
   border-radius: 10px 10px 0 0;
   background-color:aqua;
-  height:300px
+  position: absolute;
+  height:300px;
+  width: 100%;
 }
 .like-button{
   display: flex;
@@ -172,12 +193,13 @@ h2{
   color:aqua;
   border: 1px solid aqua;
   border-radius: 10px;
+  padding: 6px;
   margin-right: 10px;
   
 }
 .like-button button:hover{
   background-color:aqua;
-  color:white ;
+  color:white;
 }
 .num-button{
   display: flex;
@@ -191,13 +213,21 @@ h2{
 }
 .num-button button{
   border: 2px solid white;
-  background:none;
+  color:aqua;
+  background-color:white;
   border-radius: 5px;
   padding-right: 5px;
+  font-size: 18px;
   
 }
-.num-button:hover{
-  
+.num-button button:hover{
+  background-color:#ffff;
+  color: aqua;
+}
+span{
+  /* font-size: 12px; */
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
 
