@@ -28,7 +28,7 @@ export default function App() {
     document.getElementById('img-logo').setAttribute('src', Logone )
     // document.getElementById('head').style.backgroundColor='white'
   }
-
+  const dom = document.getElementById('char')
   const incraesing =()=>{
             setnumchar(num=num+1) 
           
