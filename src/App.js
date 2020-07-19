@@ -1,10 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 // import {Image, view} from 'react'
 import Product from './component/Product'
 import Logone from './images/drlogo.png'
 import Logtwo from './images/dr.logo.jpeg'
+import Cyber from './images/cyber.png'
+import Acv from './images/ac valhalla.png'
+import Aco from './images/ac origins.png'
+import Rdr2 from './images/rdr2.png'
+
 
 export default function App() {
+
+  const[num, setnumchar]=useState(0)
+
+  const[posts, setposts]=useState([
+    {post_name:'cyber punk 2077', price:'20$', rating:4.5 , imgsrc:Cyber, imgalt:'cyberpunk 2077' },
+    {post_name:'red dead redemption 2', price:'25$', rating:4.6 , imgsrc:Cyber, imgalt:' rdr2' },
+    {post_name:'assassins creed valhalla', price:'50$', rating:4 , imgsrc:Acv, imgalt:'ac valhalla' },
+    {post_name:'assassins creed origins', price:'40$', rating:3.7 , imgsrc:Aco, imgalt:'ac origins' },
+  ])
 
   const darkMode =()=>{
     
@@ -14,6 +28,28 @@ export default function App() {
     document.getElementById('img-logo').setAttribute('src', Logone )
     // document.getElementById('head').style.backgroundColor='white'
   }
+
+  const incraesing =()=>{
+            setnumchar(num=num+1) 
+          
+            if(num > 5){
+                dom.style.fontSize='20px'
+            }
+            if(num > 10){
+                dom.style.fontSize='25px'
+            }
+        
+       }
+        //decrementing the value
+  const decreasing =()=>{
+            setnumchar(num=num-1)
+            if(num < 0){
+                setnumchar(num=0)
+          }
+            if(num < 5){
+               dom.style.fontSize='15px'
+            }
+       }
 
   return (
 
@@ -50,9 +86,17 @@ export default function App() {
           
         <p className={'title-one'}>Best seller</p> 
         <div className={'product-container-one'}>
-            <Product name={'ac origins'} price={'$120'} rate={4.5} alt={'acor'} src={Logone}></Product>
-            <Product name={'ac oddessey'} price={'$170'} rate={4.5} alt={'acod'} src={Logtwo}></Product>
-            <Product name={'red dead'} price={'$100'} rate={4} alt={'rdr'}></Product>
+           {posts.map(post =>{
+               <Product 
+               name={post.post_name} 
+               price={post.price} 
+               rate={post.rating} 
+               src={post.imgsrc} 
+               alt={post.imgalt}
+               decrease={incraesing}
+               increas={decreasing}
+               numchar={num} />
+           })}
          </div>
          
          <p className={'title-two'}>sell</p>
