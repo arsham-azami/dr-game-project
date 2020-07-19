@@ -2,37 +2,8 @@ import React, {useState} from 'react';
 // import {UsesState} from 'react'
 export default function Product(props){
   
-    let[numchar, setnumchar]=useState(0)
+   
 
-    const addingToChart =()=>{
-        alert('added to chart')
-     }
-
-    //increasing the value
-
-    let dom = document.getElementById('char')
-
-    const incraesing =()=>{
-        setnumchar(numchar=numchar+1) 
-      
-        if(numchar > 5){
-            dom.style.fontSize='20px'
-        }
-        if(numchar > 10){
-            dom.style.fontSize='25px'
-        }
-    
-   }
-    //decrementing the value
-    const decreasing =()=>{
-        setnumchar(numchar=numchar-1)
-        if(numchar < 0){
-            setnumchar(numchar=0)
-      }
-        if(numchar < 5){
-           dom.style.fontSize='15px'
-        }
-   }
     return(
 
         <div className={'product'}>
@@ -51,12 +22,12 @@ export default function Product(props){
             </div> 
             
             <div className={'num-button'}>
-               <button onClick={incraesing}>+</button>
-                   <span id='char'>{numchar}</span>
-               <button onClick={decreasing}>-</button>
+               <button onClick={props.increas}>+</button>
+                   <span id='char'>{props.numchar}</span>
+               <button onClick={props.decreas}>-</button>
             </div>
 
-            <button className={'add-to-chart'} onClick={addingToChart}>Add to chart</button>  
+            <button className={'add-to-chart'} onClick={props.addingToChart}>Add to chart</button>  
         </div>
     
     )
