@@ -14,10 +14,10 @@ export default function App() {
   const[num, setnumchar]=useState(0)
 
   const[posts, setposts]=useState([
-    {post_name:'cyber punk 2077', price:'20$', rating:4.5 , imgsrc:Cyber, imgalt:'cyberpunk 2077' },
-    {post_name:'red dead redemption 2', price:'25$', rating:4.6 , imgsrc:Cyber, imgalt:' rdr2' },
-    {post_name:'assassins creed valhalla', price:'50$', rating:4 , imgsrc:Acv, imgalt:'ac valhalla' },
-    {post_name:'assassins creed origins', price:'40$', rating:3.7 , imgsrc:Aco, imgalt:'ac origins' },
+    {id:123,  post_name:'cyber punk 2077', price:'20$', rating:4.5 , imgsrc:Cyber, imgalt:'cyberpunk 2077' },
+    {id:1234, post_name:'red dead redemption 2', price:'25$', rating:4.6 , imgsrc:Cyber, imgalt:' rdr2' },
+    {id:234, post_name:'assassins creed valhalla', price:'50$', rating:4 , imgsrc:Acv, imgalt:'ac valhalla' },
+    {id:4321, post_name:'assassins creed origins', price:'40$', rating:3.7 , imgsrc:Aco, imgalt:'ac origins' },
   ])
 
   const darkMode =()=>{
@@ -87,23 +87,29 @@ export default function App() {
         <p className={'title-one'}>Best seller</p> 
         <div className={'product-container-one'}>
            {posts.map(post =>{
-               <Product 
-               name={post.post_name} 
-               price={post.price} 
-               rate={post.rating} 
-               src={post.imgsrc} 
-               alt={post.imgalt}
-               decrease={incraesing}
-               increas={decreasing}
-               numchar={num} />
+               <Product key={post.id} name={post.post_name} 
+                    price={post.price} 
+                    rate={post.rating} 
+                    src={post.imgsrc} 
+                    alt={post.imgalt}
+                    decrease={incraesing()}
+                    increas={decreasing()}
+                    numchar={num} ></Product>
            })}
          </div>
          
          <p className={'title-two'}>sell</p>
          <div className={'product-container-two'}>
-            <Product name={'battlefield'} price={'$100'} rate={4} alt={'rdr'}></Product>
-            <Product name={'call of duty'} price={'$100'} rate={4} alt={'rdr'}></Product>
-            <Product name={'need for speed'} price={'$120'} rate={5} alt={'nfs'}></Product>
+         {posts.map(post =>{
+               <Product key={post.id} name={post.post_name} 
+               price={post.price} 
+               rate={post.rating} 
+               src={post.imgsrc} 
+               alt={post.imgalt}
+               decrease={incraesing()}
+               increas={decreasing()}
+               numchar={num} ></Product>
+           })}
         </div>
         
      </div>
